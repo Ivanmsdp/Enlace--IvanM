@@ -1,40 +1,41 @@
 
 #!/bin/sh
 #
-# This script should be run via curl:
+# Este script debe ejecutarse a través de curl:
 #   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# or via wget:
+# o mediante wget:
 #   sh -c "$(wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# or via fetch:
+# o mediante búsqueda:
 #   sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #
-# As an alternative, you can first download the install script and run it afterwards:
+#   Como alternativa, primero puedes descargar el script de instalación y ejecutarlo después:
 #   wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 #   sh install.sh
 #
-# You can tweak the install behavior by setting variables when running the script. For
-# example, to change the path to the Oh My Zsh repository:
+# Puede modificar el comportamiento de la instalación configurando variables al ejecutar el script. 
+# ejemplo, para cambiar la ruta al repositorio Oh My Zsh: 
 #   ZSH=~/.zsh sh install.sh
 #
-# Respects the following environment variables:
-#   ZDOTDIR - path to Zsh dotfiles directory (default: unset). See [1][2]
+# Respeta las siguientes variables de entorno:
+#   Respeta las siguientes variables de entorno:
+# ZDOTDIR: ruta al directorio de archivos de puntos de Zsh (predeterminado: no establecido). Consulte [1][2]
 #             [1] https://zsh.sourceforge.io/Doc/Release/Parameters.html#index-ZDOTDIR
 #             [2] https://zsh.sourceforge.io/Doc/Release/Files.html#index-ZDOTDIR_002c-use-of
-#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.oh-my-zsh)
-#   REPO    - name of the GitHub repo to install from (default: ohmyzsh/ohmyzsh)
-#   REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)
-#   BRANCH  - branch to check out immediately after install (default: master)
+#   ZSH     - ruta a la carpeta del repositorio Oh My Zsh (predeterminado: $HOME/.oh-my-zsh)
+#   REPO    - nombre del repositorio de GitHub desde el que se realizará la instalación (predeterminado: ohmyzsh/ohmyzsh)
+#   REMOTE  - URL remota completa del repositorio git para instalar (predeterminado: GitHub a través de HTTPS)
+#   BRANCH  - rama a revisar inmediatamente después de la instalación (predeterminado: master)
 #
-# Other options:
-#   CHSH       - 'no' means the installer will not change the default shell (default: yes)
-#   RUNZSH     - 'no' means the installer will not run zsh after the install (default: yes)
-#   KEEP_ZSHRC - 'yes' means the installer will not replace an existing .zshrc (default: no)
+# Otras opciones:
+#   CHSH       - 'no' significa que el instalador no cambiará el shell predeterminado (predeterminado: yes)
+#   RUNZSH     - 'no' significa que el instalador no ejecutará zsh después de la instalación (predeterminado: yes)
+#   KEEP_ZSHRC - 'yes' significa que el instalador no reemplazará un .zshrc existente (predeterminado: no)
 #
-# You can also pass some arguments to the install script to set some these options:
-#   --skip-chsh: has the same behavior as setting CHSH to 'no'
-#   --unattended: sets both CHSH and RUNZSH to 'no'
-#   --keep-zshrc: sets KEEP_ZSHRC to 'yes'
-# For example:
+# También puedes pasar algunos argumentos al script de instalación para establecer algunas de estas opciones::
+#   --skip-chsh: tiene el mismo comportamiento que establecer CHSH en 'no'
+#   --unattended: establece tanto CHSH como RUNZSH en 'no'
+#   --keep-zshrc: establece KEEP_ZSHRC en 'yes'
+# For por ejemplo:
 #   sh install.sh --unattended
 # or:
 #   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
